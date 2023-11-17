@@ -45,8 +45,8 @@
 # print(a2) 
 
 
-# string=input("enter a string:")
-# string=["appple","orange","mango",]
+string=input("enter a string:")
+string=["appple","orange","mango",]
 l1=[]
 l2=[]
 i=0
@@ -57,10 +57,10 @@ while b<n:
     l1.append(p)
     l2.append(p[0].upper()+p[1:])
     b=b+1
-# while i<len(l1):
-#     if len(l1[i])>=5:
-#       l2.append(l1[i])  
-    # i=i+1  
+while i<len(l1):
+    if len(l1[i])>=5:
+      l2.append(l1[i])  
+    i=i+1  
     
 print(l1,l2) 
 
