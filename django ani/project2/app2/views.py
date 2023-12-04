@@ -22,6 +22,15 @@ def add_item(request):
             return list(request)
     return render(request,'add.html',{'form':d})
 
+
+def user_form2(request):
+    if request.method=='POST':
+        d=studform(request.POST)
+        if d.is_valid():
+            d.save()
+            return list(request)
+    return render(request,'form2.html')
+
 def list(request):
     p=student.objects.all()
     return render(request,'list.html',{'d':p})
