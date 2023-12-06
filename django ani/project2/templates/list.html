@@ -14,6 +14,8 @@
 <td> {{i.name}}</td>
 <td> {{i.rollno}}</td>
 <td> {{i.place}}</td>
+<td><a class="btn btn-success" href="{% url 'edit' i.pk %}">edit</a></td>
+<td><a class="btn btn-danger" href="{% url 'delete' i.pk %}">delete</a></td>
 
         </tr>
 

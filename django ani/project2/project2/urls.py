@@ -24,4 +24,7 @@ urlpatterns = [
     path('add/',views.add_item,name='add'),
     path('list/',views.list,name='list'),
     path('forms/',views.user_form2,name='form'),
+    path('edit/<int:p>',views.edit_item,name='edit'),
+    path('delete/<int:p>',views.delete_item,name='delete'),
+
 ]

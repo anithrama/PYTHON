@@ -34,3 +34,18 @@ def user_form2(request):
 def list(request):
     p=student.objects.all()
     return render(request,'list.html',{'d':p})
+
+def edit_item(request,p):
+    b=student.objects.get(pk=p)
+    d=studform(instance=b)
+    if request.method=='POST':
+        d=studform(request.POST,instance=b)
+        if d.is_valid():
+           d.save()
+           return list(request)
+    return render(request,'edit.html',{'form':d})
+
+def delete_item(request,p):
+    b=student.objects.get(pk=p)
+    b.delete()
+    return list(request)
