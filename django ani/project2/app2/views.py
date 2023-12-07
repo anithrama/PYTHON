@@ -49,3 +49,13 @@ def delete_item(request,p):
     b=student.objects.get(pk=p)
     b.delete()
     return list(request)
+
+def form3(request):
+    if request.method=='POST':
+        name1=request.POST.get('n')
+        roll=request.POST.get('r')
+        place1=request.POST.get('p')
+        data=student.objects.create(name=name1,rollno=roll,place=place1)
+        data.save()
+        return list(request)
+    return render(request,'form3.html')

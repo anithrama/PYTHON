@@ -26,5 +26,6 @@ urlpatterns = [
     path('forms/',views.user_form2,name='form'),
     path('edit/<int:p>',views.edit_item,name='edit'),
     path('delete/<int:p>',views.delete_item,name='delete'),
+    path('form/',views.form3,name='form3'),
 
 ]
